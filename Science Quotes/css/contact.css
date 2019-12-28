@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "montserrat", sans-serif;
+}
+
+body {
+  border: 0;
+  background-position: center;
+  background: linear-gradient(to bottom,rgba(0, 0, 0, 0.8), rgba(0, 0, 70, 0.3)), url(images.png);
+  /* background-size: cover; */
+  /* background-position: center; */
+}
+
+/* Start of navbar */
+.header {
+  height: 100px;
+  background: #34495e;
+  padding: 0 20px;
+  color: #fff;
+} 
+
+span {
+  color: crimson;
+}
+
+.logo {
+  line-height: 100px;
+  float: left;
+  text-transform: capitalize;
+}
+
+.menu {
+  float: right;
+  line-height: 100px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0 10px;
+  transition: 0.4s;
+}
+
+.show-menu-btn,
+.hide-menu-btn {
+  transition: 0.4s;
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+.show-menu-btn {
+  float: right;
+}
+
+.show-menu-btn i {
+  line-height: 100px;
+}
+
+.menu a:hover,
+.show-menu-btn:hover,
+.hide-menu-btn:hover {
+  color: black;
+}
+
+.menu a.active {
+  background: cadetblue;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-radius: 5px;
+}
+
+#chk {
+  position: absolute;
+  visibility: hidden;
+  z-index: -1111;
+}
+
+.content {
+  padding: 0 10px;
+}
+
+.content img {
+  width: 100%;
+  max-width: 700px;
+  margin: 20px 0;
+}
+
+.content p {
+  text-align: justify;
+}
+/* End of navbar */
+
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+@media screen and (max-width: 800px) {
+  .show-menu-btn,
+  .hide-menu-btn {
+      display: block;
+  }
+
+  body {
+    border: 0;
+    background-position: center;
+    background: linear-gradient(to bottom,rgba(0, 0, 0, 0.8), rgba(0, 0, 70, 0.3)), url(images.png);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .menu {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #333;
+      right: -100%;
+      top: 0;
+      text-align: center;
+      padding: 80px 0;
+      line-height: normal;
+      transition: 0.7s;
+  }
+
+  .menu a {
+      display: block;
+      padding: 20px;
+  }
+
+  .hide-menu-btn {
+      position: absolute;
+      top: 40px;
+      right: 40px;
+  }
+
+  #chk:checked ~ .menu {
+      right: 0;
+  }
+}
+/* End of responsiveness */
+
+/* Start of contact design */
+.contact-title {
+  margin-top: 100px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.contact-title h1 {
+  font-size: 32px;
+  line-height: 10px;
+  text-align: center;
+  color: greenyellow;
+  padding-bottom: 15px;
+}
+
+.contact-title h2 {
+  font-size: 16px;
+  text-align: center;
+  color: greenyellow;
+}
+
+form {
+  margin-top: 50px;
+  transition: all 4s ease-in-out;
+}
+
+.email {
+  width: 600px;
+  background: transparent;
+  border: none;
+  border-radius: 10px;
+  border-bottom: 1px solid gray;
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 16px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  background: #111;
+  padding: 20px 20px;
+  outline: none;
+  color: #ddd;
+  transition: 0.5s;
+}
+
+.email:focus {
+  box-shadow: 0 0 10px 4px #34495e;
+}
+
+.form-control {
+  width: 600px;
+  background: transparent;
+  border: none;
+  border-radius: 10px;
+  border-bottom: 1px solid gray;
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 16px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  background: #111;
+  padding: 20px 20px;
+  outline: none;
+  color: #ddd;
+  transition: 0.5s;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 10px 4px #34495e;
+}
+
+textarea.form-control {
+  resize: none;
+  height: 120px;
+}
+
+input {
+  height: 45px;
+}
+
+form button {
+  background: #ff5722;
+  border-color: transparent;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  height: 50px;
+  margin-top: 20px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+form button:hover {
+  background-color: #f44336;
+  cursor: pointer;
+}
+
+.contact-form {
+  text-align: center;
+  max-width: 600px;
+  margin: auto;
+  padding: 0 10px;
+  overflow: hidden;
+}
+
+.contact-form-text:hover {
+  box-shadow: 0 0 10px 4px #34495e;
+}
+
+.ct {
+  text-align: center;
+  color: greenyellow;
+}
+/* End of contact design */
+
+/* Start of footer */
+.mid {
+padding: 35px; 
+}
+
+#copyright {   
+color: goldenrod;
+text-align: center;
+padding-top: 2px;
+margin: 0;
+}
+/* End of footer */
